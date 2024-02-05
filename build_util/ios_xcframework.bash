@@ -23,7 +23,7 @@ arches=("aarch64" "sim")
 for arch in "${!arches[@]}"; do
     echo "* copy Framework-${arch} template"
     mkdir -p "Framework-${arch}/voicevox_core.framework/Headers"
-    cp -vr "crates/voicevox_core_c_api/xcframework/Frameworks/${arch}/" "Framework-${framework}/"
+    cp -vr "crates/voicevox_core_c_api/xcframework/Frameworks/${arch}/" "Framework-${arch}/"
     cp -v "artifact/voicevox_core-aarch64-apple-ios/voicevox_core.h" \
         "Framework-${arch}/voicevox_core.framework/Headers/voicevox_core.h"
 done
