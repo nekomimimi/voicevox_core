@@ -20,7 +20,7 @@ fi
 echo "Original onnx dylib file name: $dylib_string"
 
 arches=("aarch64" "sim")
-for arch in "${!arches[@]}"; do
+for arch in "${arches[@]}"; do
     echo "* copy Framework-${arch} template"
     mkdir -p "Framework-${arch}/voicevox_core.framework/Headers"
     cp -vr "crates/voicevox_core_c_api/xcframework/Frameworks/${arch}/" "Framework-${arch}/"
