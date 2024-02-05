@@ -378,6 +378,7 @@ jobs:
           path: artifact/voicevox_core-aarch64-apple-ios
       - name: Create aarch64 Framework
         run: |
+          /ios_xcframework.bash
           mkdir -p "Framework-aarch64/voicevox_core.framework/Headers"
           cp -vr crates/voicevox_core_c_api/xcframework/Frameworks/aarch64/ Framework-aarch64/
           cp -v artifact/voicevox_core-aarch64-apple-ios/voicevox_core.h \
